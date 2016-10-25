@@ -27,3 +27,5 @@ RUN curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-co
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+# Fix node link to nodejs
+RUN update-alternatives --install /usr/bin/node node /usr/bin/nodejs 99
