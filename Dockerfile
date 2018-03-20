@@ -1,10 +1,10 @@
 FROM ubuntu:16.04
 MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
-ENV DOCKER_VERSION=17.07.0-ce \
-    DOCKER_COMPOSE_VERSION=1.16.1 \
-    COMPOSER_VERSION=1.5.1 \
-    YARN_VERSION=0.27.5 \
+ENV DOCKER_VERSION=18.02.0-ce \
+    DOCKER_COMPOSE_VERSION=1.19.0 \
+    COMPOSER_VERSION=1.6.3 \
+    YARN_VERSION=1.5.1 \
     NODEJS_VERSION=6.0
 
 # Install packages
