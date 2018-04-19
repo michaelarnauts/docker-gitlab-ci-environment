@@ -5,7 +5,7 @@ ENV DOCKER_VERSION=18.02.0-ce \
     DOCKER_COMPOSE_VERSION=1.19.0 \
     COMPOSER_VERSION=1.6.3 \
     YARN_VERSION=1.5.1 \
-    NODEJS_VERSION=6.0
+    NODEJS_VERSION=8.0
 
 # Install packages
 RUN apt-get update && \
@@ -34,7 +34,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
   && /usr/local/bin/composer --version
 
 # Add nodejs repository
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 
 # Add yarn repository
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
