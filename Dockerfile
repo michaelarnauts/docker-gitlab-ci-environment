@@ -1,10 +1,10 @@
 FROM ubuntu:16.04
 MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
-ENV DOCKER_VERSION=18.02.0-ce \
-    DOCKER_COMPOSE_VERSION=1.19.0 \
-    COMPOSER_VERSION=1.6.3 \
-    YARN_VERSION=1.5.1 \
+ENV DOCKER_VERSION=18.06.0-ce \
+    DOCKER_COMPOSE_VERSION=1.22.0 \
+    COMPOSER_VERSION=1.6.5 \
+    YARN_VERSION=1.7.0 \
     NODEJS_VERSION=8.0
 
 # Install packages
@@ -16,6 +16,7 @@ RUN apt-get update && \
     make \
     php-cli \
     php-curl \
+    php-mbstring \
     php-xml \
     php-zip \
   && apt-get clean \
