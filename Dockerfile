@@ -3,7 +3,7 @@ MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
 ENV DOCKER_VERSION=18.09.1-ce \
     DOCKER_COMPOSE_VERSION=1.23.2 \
-    COMPOSER_VERSION=1.8.0 \
+    COMPOSER_VERSION=1.8.3 \
     YARN_VERSION=1.13.0 \
     NODEJS_VERSION=8.0
 
@@ -19,6 +19,7 @@ RUN apt-get update && \
     php-mbstring \
     php-xml \
     php-zip \
+    unzip \
   && apt-get clean \
   && rm -r /var/lib/apt/lists/*
 
