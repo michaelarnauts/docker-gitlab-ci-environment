@@ -1,11 +1,11 @@
 FROM ubuntu:18.04
 MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
-ENV DOCKER_VERSION=18.09.5-ce \
-    DOCKER_COMPOSE_VERSION=1.24.0 \
-    COMPOSER_VERSION=1.8.5 \
-    YARN_VERSION=1.15.2 \
-    NODEJS_VERSION=8.0
+ENV DOCKER_VERSION=19.03.2-ce \
+    DOCKER_COMPOSE_VERSION=1.24.1 \
+    COMPOSER_VERSION=1.9.0 \
+    YARN_VERSION=1.17.3 \
+    NODEJS_VERSION=10.9.0
 
 # Install packages
 RUN apt-get update && \
@@ -36,7 +36,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
   && /usr/local/bin/composer --version
 
 # Add nodejs repository
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 
 # Add yarn repository
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
@@ -50,3 +50,6 @@ RUN apt-get update && \
     yarn \
   && apt-get clean \
   && rm -r /var/lib/apt/lists/*
+
+# Add used packages
+RUN npm install -g bpmnlint
