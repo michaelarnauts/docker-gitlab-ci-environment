@@ -52,4 +52,4 @@ RUN apt-get update && \
   && rm -r /var/lib/apt/lists/*
 
 # Add used packages
-RUN npm install -g bpmnlint
+RUN npm install -g bpmnlint sentry-cli
