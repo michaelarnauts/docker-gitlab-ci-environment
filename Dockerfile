@@ -1,10 +1,10 @@
 FROM ubuntu:18.04
 MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
-ENV DOCKER_VERSION=19.03.2-ce \
-    DOCKER_COMPOSE_VERSION=1.24.1 \
+ENV DOCKER_VERSION=19.03.6-ce \
+    DOCKER_COMPOSE_VERSION=1.25.4 \
     COMPOSER_VERSION=1.9.0 \
-    YARN_VERSION=1.17.3 \
+    YARN_VERSION=1.21.1 \
     NODEJS_VERSION=10.9.0
 
 # Install packages
