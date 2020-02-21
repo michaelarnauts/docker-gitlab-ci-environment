@@ -16,6 +16,7 @@ RUN apt-get update && \
     make \
     php-cli \
     php-curl \
+    php-gd \
     php-mbstring \
     php-xml \
     php-zip \
