@@ -1,11 +1,11 @@
 FROM ubuntu:18.04
 MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
-ENV DOCKER_VERSION=19.03.6-ce \
-    DOCKER_COMPOSE_VERSION=1.25.4 \
-    COMPOSER_VERSION=1.9.0 \
-    YARN_VERSION=1.21.1 \
-    NODEJS_VERSION=10.9.0
+ENV DOCKER_VERSION=19.03.13-ce \
+    DOCKER_COMPOSE_VERSION=1.27.4 \
+    COMPOSER_VERSION=1.10.17 \
+    YARN_VERSION=1.22.5 \
+    NODEJS_VERSION=12.20.0
 
 # Install packages
 RUN apt-get update && \
@@ -37,7 +37,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
   && /usr/local/bin/composer --version
 
 # Add nodejs repository
-RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
 
 # Add yarn repository
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
