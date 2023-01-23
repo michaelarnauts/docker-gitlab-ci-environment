@@ -1,6 +1,6 @@
 # docker-gitlab-ci-environment
 
-A Gitlab CI environment based on Ubuntu 16.04 with `docker`, `docker-compose`, `node`, `npm`, `php7` and `composer` installed.
+A Gitlab CI environment based on Ubuntu 18.04 with `docker`, `docker-compose`, `node`, `npm`, `php7` and `composer` installed.
 
 ## Usage
 

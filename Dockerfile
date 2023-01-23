@@ -1,11 +1,8 @@
 FROM ubuntu:18.04
 MAINTAINER Michaël Arnauts <michael.arnauts@destiny.be>
 
-ENV DOCKER_VERSION=19.03.13-ce \
-    DOCKER_COMPOSE_VERSION=1.27.4 \
-    COMPOSER_VERSION=1.10.17 \
-    YARN_VERSION=1.22.5 \
-    NODEJS_VERSION=12.20.0
+ENV DOCKER_COMPOSE_VERSION=1.27.4 \
+    COMPOSER_VERSION=1.10.21
 
 # Install packages
 RUN apt-get update && \
